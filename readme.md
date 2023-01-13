@@ -18,11 +18,38 @@ Dependencies:
 
 
 ## Parameters
+
+The system currently supports three options:
+
+##### Export image file, axtracted from DICOM file
+
+Parameters:
+* `source`
+* `dest`
+
+Usage:
+
+    dicommanager export -s -d
+
+##### Extract and print DICOM file metadata (selected tags)
+
+Parameters:
+* `source` 
+* `dest` 
+
+Usage:
+
+    dicommanager anomize -s -d
+
+##### Extract and print DICOM file metadata (selected tags)
+
 Parameters:
 
+* `filename` 
 
-At the command prompt, type `nano`.
+Usage:
 
+    dicommanager metadata -s -d
 
 ## Performance results
 
