@@ -21,25 +21,25 @@ Dependencies:
 
 The system currently supports three options:
 
-##### Export image file, axtracted from DICOM file
+##### Export image file, extracted from DICOM file
 
 Parameters:
-* `source`
-* `dest`
+* `source` - source DICOM filename
+* `dest` - destination filename (png file)
 
 Usage:
 
-    dicommanager export -s -d
+    dicommanager export -s in/files/dicom/001 -d out/123.png 
 
-##### Extract and print DICOM file metadata (selected tags)
+##### Perform mass anonimization for selected folder
 
 Parameters:
-* `source` 
-* `dest` 
+* `source` - source folder with DICOM files (the application works recursively in all subfolders)
+* `dest` - destination folder, where anomized DICOM files are saved
 
 Usage:
 
-    dicommanager anomize -s -d
+    dicommanager anomize -s in/files -d /out/files
 
 ##### Extract and print DICOM file metadata (selected tags)
 
@@ -49,7 +49,7 @@ Parameters:
 
 Usage:
 
-    dicommanager metadata -s -d
+    dicommanager metadata -f in/files/dicom/001
 
 ## Performance results
 
