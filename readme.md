@@ -1,8 +1,8 @@
-# DICOM Manager
+# DICOM Anomizer
 
 ## Overview
 
-Application for mass anonymization of DICOM files. It works very fast, even on thousands of files.
+Tool for mass anonymization of DICOM files. It works very fast, even on thousands of files.
 
 
 Dependencies:
