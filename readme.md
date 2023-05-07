@@ -38,13 +38,13 @@ The following tags of DICOM document are anomized:
 Anonymization takes place in the following steps:
 1. All DICOM files in the folder specified in the `source` parameter are listed and saved in the *_metadata.csv* file in the folder specified in the `dest` parameter. Note: all folders and subfolders in the `source` directory are processed. There can be any types of files in the `source` directory, the program verifies each file with the DICOM format. Only DICOM files end up in the metadata file. The *_metadata.csv* file contains three columns: file sequence number, full path to DICOM file, and DICOM file size.
 1. For each file registered in *_metadata.csv* the following steps are performed:
-	a. Extract patient data (PATIENT_ID and PATIENT_NAME) from the specified DICOM file
-	b. Verify that this patient has already been processed (based on PATIENT_ID tag)
-	c. If it has not been processed: add a new unique patient index, add a DICOM image and give it number 1
-	d. If it was processed: find its index, for the found index (*patient_index*), add a DICOM image with a incremended number (increment successive images for a given *patient_index*)
-	e. Anonymise the DICOM document
-	f. Copy the anonymized DICOM file to the folder specified in the `dest` parameter. Source DICOM is not modified.
-	g. Add an entry to the excel file *_out.xlsx* containing the following attributes (columns): 
+	1. Extract patient data (PATIENT_ID and PATIENT_NAME) from the specified DICOM file
+	1. Verify that this patient has already been processed (based on PATIENT_ID tag)
+	1. If it has not been processed: add a new unique patient index, add a DICOM image and give it number 1
+	1. If it was processed: find its index, for the found index (*patient_index*), add a DICOM image with a incremended number (increment successive images for a given *patient_index*)
+	1. Anonymise the DICOM document
+	1. Copy the anonymized DICOM file to the folder specified in the `dest` parameter. Source DICOM is not modified.
+	1. Add an entry to the excel file *_out.xlsx* containing the following attributes (columns): 
 		1. source_file - full path to source DICOM file
 		2. patient_name - patient name extracted from source DICOM file (PATIENT_NAME)
 		3. patient_id_DICOM  - patient ID extracted from source DICOM file (PATIENT_ID)
